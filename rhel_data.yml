@@ -1,0 +1,15 @@
+---
+- name: Data gathering from RHEL system
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+  - name: Package info Data
+    ansible.builtin.package_facts:
+    register: package_list
+
+  - name: Show facts from setup module
+    var: ansible_facts 
+
+  - name: Show facts istalled packages
+    var: package_list
