@@ -11,11 +11,11 @@
         password: "{{ lookup('env', 'VMWARE_PASSWORD') }}"
         validate_certs: 'no'
         datacenter: '{{ datacenter_name | default("Retired Hosts") }}'
-        esxi_hostname: '{{ esx_hostname | default(172.16.7.111) }}' 
+        esxi_hostname: '{{ esx_hostname | default("172.16.7.111") }}' 
 #        cluster: '{{ cluster_name | default() }}'
-        name: '{{ vm_name | default(change_me) }}'
+        name: '{{ vm_name | default("change_me") }}'
 #        folder: 'POCansible/vms'
-        template: '{{ vm_template | default(rhe8.4-raben_ansible_templete) }}'
+        template: '{{ vm_template | default("rhe8.4-raben_ansible_templete") }}'
         state: 'poweredon'
         hardware: 
           memory_mb: '{{ memory_mb | default(4096) }}'
