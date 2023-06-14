@@ -10,7 +10,7 @@
         username: "{{ lookup('env', 'VMWARE_USER') }}" 
         password: "{{ lookup('env', 'VMWARE_PASSWORD') }}"
         validate_certs: 'no'
-        datacenter: '{{ datacenter_name | default(Retired Hosts) }}'
+        datacenter: '{{ datacenter_name | default("Retired Hosts") }}'
         esxi_hostname: '{{ esx_hostname | default(172.16.7.111) }}' 
 #        cluster: '{{ cluster_name | default() }}'
         name: '{{ vm_name | default(change_me) }}'
