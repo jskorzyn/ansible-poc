@@ -26,3 +26,4 @@
             netmask: '{{ vm_net_mask | default("255.255.255.0") }}'
             gateway: '{{ vm_net_gateway | default("172.16.5.1") }}'
             start_connected: true
+        wait_for_ip_address: 'yes'
