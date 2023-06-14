@@ -14,7 +14,7 @@
         esxi_hostname: '{{ esx_hostname | default("172.16.7.111") }}' 
 #        cluster: '{{ cluster_name | default() }}'
         name: '{{ vm_name | default("change_me") }}'
-#        folder: 'POCansible/vms'
+        folder: '{{ folder_name | default("Retired Hosts/vm") }}' #POCansible/vms
         template: '{{ vm_template | default("rhe8.4-raben_ansible_templete") }}'
         state: 'poweredon'
         hardware: 
