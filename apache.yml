@@ -6,8 +6,3 @@
 
   roles:
     - role: ansible-role-apache
-      vars:
-        __apache_packages:
-          - httpd
-          - mod_ssl
-          - openssh
