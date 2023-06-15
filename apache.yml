@@ -2,7 +2,7 @@
 - name: Apache server config playbook
   hosts: all
   vars_files:
-    - "{{palybook_dir}}/vars/apache_vars.yml"
+    - "{{playbook_dir}}/vars/apache_vars.yml"
 
   roles:
     - role: ansible-role-apache
