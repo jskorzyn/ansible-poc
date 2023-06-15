@@ -1,4 +1,4 @@
 ---
 roles:
   - name: ansible-role-apache
-    src: https://github.com/geerlingguy/ansible-role-apache.git
+    src: https://github.com/jskorzyn/ansible-role-apache.git
